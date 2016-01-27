@@ -34,4 +34,18 @@ void PlayingState::update(float secs)
 
 	if (mKeys[C2D2_ESPACO].ativo)
 		mShip->position.set(0.f, 0.f);
+
+	if (mShip->position.x > mContext.game->getWidth() / 2.f) {
+		mShip->position.x -= mContext.game->getWidth();
+	}
+	else if (mShip->position.x < -mContext.game->getWidth() / 2.f) {
+		mShip->position.x += mContext.game->getWidth();
+	}
+
+	if (mShip->position.y > mContext.game->getHeight() / 2.f) {
+		mShip->position.y -= mContext.game->getHeight();
+	}
+	else if (mShip->position.y < -mContext.game->getHeight() / 2.f) {
+		mShip->position.y += mContext.game->getHeight();
+	}
 }
