@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{CFC70FCA-4DBE-46AC-A1E7-E623929F8BA6}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Game</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>..\TinyXML2\include;..\Audiere\include;..\Chien2D\lua\include;..\Chien2D\c2d2\include;..\Chien2D\SDL\include;..\Chien2D\SDL_image\include;..\Chien2D\SDL_mixer\include;$(IncludePath)</IncludePath>
+    <LibraryPath>..\TinyXML2\lib;..\Audiere\lib;..\Chien2D\lua;..\Chien2D\c2d2\lib;..\Chien2D\SDL\lib;..\Chien2D\SDL_image\lib;..\Chien2D\SDL_mixer\lib;$(VCInstallDir)lib;$(VCInstallDir)atlmfc\lib;$(WindowsSDK_LibraryPath_x86)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>..\TinyXML2\include;..\Audiere\include;..\Chien2D\lua\include;..\Chien2D\c2d2\include;..\Chien2D\SDL\include;..\Chien2D\SDL_image\include;..\Chien2D\SDL_mixer\include;$(IncludePath)</IncludePath>
+    <LibraryPath>..\TinyXML2\lib;..\Audiere\lib;..\Chien2D\lua;..\Chien2D\c2d2\lib;..\Chien2D\SDL\lib;..\Chien2D\SDL_image\lib;..\Chien2D\SDL_mixer\lib;$(VCInstallDir)lib;$(VCInstallDir)atlmfc\lib;$(WindowsSDK_LibraryPath_x86)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>tinyxml2.lib;audiere.lib;lua5.1.lib;c2d2.lib;c2d2luad.lib;ca2.lib;SDL.lib;SDLMain.lib;SDL_image.lib;SDL_mixer.lib;opengl32.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>tinyxml2.lib;audiere.lib;lua5.1.lib;c2d2.lib;c2d2luad.lib;ca2.lib;SDL.lib;SDLMain.lib;SDL_image.lib;SDL_mixer.lib;opengl32.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Framework\Game.cpp" />
+    <ClCompile Include="Framework\GameState.cpp" />
+    <ClCompile Include="Framework\Audio\SoundBuffer.cpp" />
+    <ClCompile Include="Framework\Graphics\Sprite.cpp" />
+    <ClCompile Include="Framework\Graphics\TextureManager.cpp" />
+    <ClCompile Include="Framework\Graphics\Transformable.cpp" />
+    <ClCompile Include="Game\Entities\Ship.cpp" />
+    <ClCompile Include="Game\GameStates\PlayingState.cpp" />
+    <ClCompile Include="Game\SpaceGame.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Math\AffineTransform.cpp" />
+    <ClCompile Include="Math\MathUtil.cpp" />
+    <ClCompile Include="Math\Matrix3.cpp" />
+    <ClCompile Include="Math\Vector2.cpp" />
+    <ClCompile Include="Math\Vector3.cpp" />
+    <ClCompile Include="Game\GameStates\SplashState.cpp" />
+    <ClCompile Include="Framework\Scene\SceneNode.cpp" />
+    <ClCompile Include="Framework\Physics\Body.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Framework\Graphics\Drawable.h" />
+    <ClInclude Include="Framework\Audio\SoundBuffer.h" />
+    <ClInclude Include="Framework\Graphics\Sprite.h" />
+    <ClInclude Include="Framework\Game.h" />
+    <ClInclude Include="Framework\GameState.h" />
+    <ClInclude Include="Framework\Graphics\TextureManager.h" />
+    <ClInclude Include="Framework\Graphics\Transformable.h" />
+    <ClInclude Include="Game\Entities\Ship.h" />
+    <ClInclude Include="Game\Entities\Ships\Djoker.h" />
+    <ClInclude Include="Game\GameStates\PlayingState.h" />
+    <ClInclude Include="Game\Resources.h" />
+    <ClInclude Include="Game\SpaceGame.h" />
+    <ClInclude Include="Math\AffineTransform.h" />
+    <ClInclude Include="Math\MathUtil.h" />
+    <ClInclude Include="Math\Matrix3.h" />
+    <ClInclude Include="Math\Vector2.h" />
+    <ClInclude Include="Math\Vector3.h" />
+    <ClInclude Include="Game\GameStates\SplashState.h" />
+    <ClInclude Include="Framework\Scene\SceneNode.h" />
+    <ClInclude Include="Framework\Physics\Body.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Game\config.lua" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
