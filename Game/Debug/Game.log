@@ -1,8 +1,14 @@
-﻿Build started 26/01/2016 22:29:58.
+﻿Build started 29/01/2016 22:43:29.
      1>Project "C:\Users\Charles\Documents\GitHub\BaseGame\Game\Game.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IC:\Users\Charles\Documents\GitHub\BaseGame\Game\ /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Game\GameStates\PlayingState.cpp
-         PlayingState.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IC:\Users\Charles\Documents\GitHub\BaseGame\Game\ /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Game\GameStates\GameoverState.cpp Game\JamGame.cpp Game\GameStates\TitleState.cpp Game\GameStates\StoryState.cpp Game\GameStates\InstructionsState.cpp Game\GameStates\SplashState.cpp
+         SplashState.cpp
+         InstructionsState.cpp
+         StoryState.cpp
+         TitleState.cpp
+         JamGame.cpp
+         GameoverState.cpp
+         Generating Code...
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Charles\Documents\GitHub\BaseGame\Debug\Game.exe" /INCREMENTAL /NOLOGO tinyxml2.lib audiere.lib lua5.1.lib c2d2.lib c2d2luad.lib ca2.lib SDL.lib SDLMain.lib SDL_image.lib SDL_mixer.lib opengl32.lib glu32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Charles\Documents\GitHub\BaseGame\Debug\Game.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Charles\Documents\GitHub\BaseGame\Debug\Game.lib" /MACHINE:X86 Debug\Game.obj
          Debug\GameState.obj
@@ -12,7 +18,11 @@
          Debug\Transformable.obj
          Debug\Ship.obj
          Debug\PlayingState.obj
-         Debug\SpaceGame.obj
+         Debug\GameoverState.obj
+         Debug\JamGame.obj
+         Debug\TitleState.obj
+         Debug\StoryState.obj
+         Debug\InstructionsState.obj
          Debug\main.obj
          Debug\AffineTransform.obj
          Debug\MathUtil.obj
@@ -38,4 +48,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:03.26
+Time Elapsed 00:00:07.65

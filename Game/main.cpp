@@ -1,16 +1,16 @@
 #include <c2d2/chien2d2lua.h>
 #include <iostream>
-#include <Game/SpaceGame.h>
+#include <Game/JamGame.h>
 
 using namespace std;
 
-SpaceGame* game;
+JamGame* game;
 
 void setup()
 {
 	unsigned width = (unsigned)CL2_Double("largura_janela");
 	unsigned height = (unsigned)CL2_Double("altura_janela");
-	game = new SpaceGame(width, height);
+	game = new JamGame(width, height);
 }
 
 void update(float secs)
@@ -34,6 +34,7 @@ bool gameover(C2D2_Botao* teclas)
 {
 	return !game->isRunning()
 		|| teclas[C2D2_ENCERRA].pressionado
+		|| teclas[C2D2_ESC].pressionado
 		|| teclas[C2D2_F4].pressionado && teclas[C2D2_LALT].ativo;
 }
 

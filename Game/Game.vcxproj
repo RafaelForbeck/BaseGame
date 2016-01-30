@@ -94,7 +94,11 @@
     <ClCompile Include="Framework\Graphics\Transformable.cpp" />
     <ClCompile Include="Game\Entities\Ship.cpp" />
     <ClCompile Include="Game\GameStates\PlayingState.cpp" />
-    <ClCompile Include="Game\SpaceGame.cpp" />
+    <ClCompile Include="Game\GameStates\GameoverState.cpp" />
+    <ClCompile Include="Game\JamGame.cpp" />
+    <ClCompile Include="Game\GameStates\TitleState.cpp" />
+    <ClCompile Include="Game\GameStates\StoryState.cpp" />
+    <ClCompile Include="Game\GameStates\InstructionsState.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Math\AffineTransform.cpp" />
     <ClCompile Include="Math\MathUtil.cpp" />
@@ -116,8 +120,12 @@
     <ClInclude Include="Game\Entities\Ship.h" />
     <ClInclude Include="Game\Entities\Ships\Djoker.h" />
     <ClInclude Include="Game\GameStates\PlayingState.h" />
+    <ClInclude Include="Game\GameStates\GameoverState.h" />
     <ClInclude Include="Game\Resources.h" />
-    <ClInclude Include="Game\SpaceGame.h" />
+    <ClInclude Include="Game\JamGame.h" />
+    <ClInclude Include="Game\GameStates\TitleState.h" />
+    <ClInclude Include="Game\GameStates\StoryState.h" />
+    <ClInclude Include="Game\GameStates\InstructionsState.h" />
     <ClInclude Include="Math\AffineTransform.h" />
     <ClInclude Include="Math\MathUtil.h" />
     <ClInclude Include="Math\Matrix3.h" />
